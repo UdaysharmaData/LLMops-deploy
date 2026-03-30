@@ -5,3 +5,6 @@ langchain
 langchain_core
 streamlit
 langchain_groq
+fastapi
+uvicorn
+gunicorn
