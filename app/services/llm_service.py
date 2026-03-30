@@ -1,7 +1,7 @@
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph , START,END
 from dotenv import load_dotenv
-from schemas.chat_schema import LLMstate
+from app.schemas.chat_schema import LLMstate
 
 load_dotenv()
 
