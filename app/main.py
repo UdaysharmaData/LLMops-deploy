@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 # from schemas.chat_schema import Response
-from services.llm_service import chatbot
+from app.services.llm_service import chatbot
 
 
 app = FastAPI()
