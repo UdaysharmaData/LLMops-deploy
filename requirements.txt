@@ -4,3 +4,4 @@ lanngraph
 langchain
 langchain_core
 streamlit
+langchain_groq
