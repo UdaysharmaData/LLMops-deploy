@@ -19,11 +19,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
+
+      - name: Zip project
+        run: zip -r app.zip .
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'LLMOps-api'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: app.zip
