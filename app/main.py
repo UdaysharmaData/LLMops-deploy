@@ -4,14 +4,14 @@ from langchain_core.messages import HumanMessage
 from app.services.llm_service import chatbot
 import os
 from sqlalchemy import create_engine
-from app.services.chat_history import MySQLSaver
+from app.services.chat_history import DBSaver
 from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
 
 
-saver  = MySQLSaver(os.getenv("DATABASE_URL"))
+saver  = DBSaver()
 
 
 
